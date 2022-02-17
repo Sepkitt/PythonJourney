@@ -1,7 +1,7 @@
 # My PythonJourney
 
 
-Currently following the a list of [Beginner friendly projects](https://www.upgrad.com/blog/python-projects-ideas-topics-beginners/#You_can_also_enrol_yourself_for_Free_Python_Certification_Course)
+Currently following a list of [Beginner friendly projects](https://www.upgrad.com/blog/python-projects-ideas-topics-beginners/#You_can_also_enrol_yourself_for_Free_Python_Certification_Course)
 
 
 
