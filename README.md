@@ -16,7 +16,7 @@ This github repo has been created to keep track of my progress
 | 2             | Number Guessing                   |`Done`           |
 | 3             | Text-based Adventure Game         |`In_Progress`    |
 | 4             | Dice Rolling Simulator            |`Done`           |
-| 5             | Hangman                           |`In_Progress`    |
+| 5             | Hangman                           |`Done`           |
 | 6             | Contact Book                      |                 |
 | 7             | Email Slicer                      |                 |
 | 8             | Binary search algorithm           |                 |
