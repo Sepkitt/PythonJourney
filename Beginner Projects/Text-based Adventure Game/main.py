@@ -5,7 +5,7 @@ colorama.init(autoreset=True)
 
 def start_game():
     healthPoints = 10
-    equipped = ''
+    equipped = 'nothing'
 
     print(
         f'You are an elite soldier tasked with saving the princess, your starting with {Fore.GREEN}{healthPoints}{Fore.RESET} health points')
@@ -35,15 +35,16 @@ def start_game():
                     equipped = 'flower'
                     print(f'Your total health points is {healthPoints}')
                     answer = input(
-                        f'You have to choose if you want to go back to the sewers or go forward ({Fore.YELLOW}forward{Fore.RESET}/{Fore.GREEN}down{Fore.RESET})').lower().strip()
+                        f'You have to choose if you want to go back to the sewers or go continue going forward. ({Fore.YELLOW}forward{Fore.RESET}/{Fore.GREEN}down{Fore.RESET})').lower().strip()
 
                     if(answer == 'forward'):
+                        print('You go forward and you encounter')
                         
                     # Go back to Sewers
                     elif(answer == 'down'):
-                        sewers()
+                        sewers(equipped)
                     else:
-                        Undecided()
+                        undecided()
 
                 elif(answer == 'cookie'):
                     print(
@@ -53,19 +54,17 @@ def start_game():
                     # Go back down the sewers
                     equipped = 'cookie'
                     if(answer == 'down'):
-                        sewers()
+                        sewers(equipped)
                     elif(answer == 'forward'):
-                        print(
-                            f'{Fore.CYAN} You went forward and come across two paths')
-                        answer = input(f'Do you go left or right? (Left/Right')
-
+                        forward()
+                        
                 elif(answer == 'apple'):
                     healthPoints = 0
                     print(f'The apple was extremely poisonous and it causes you to collapse, the monster that was chasing you at the beginning caught up to you and you were eaten')
                 else:
-                    Undecided()
+                    undecided()
 
-            elif(answer == down):
+            elif(answer == 'down'):
                 print(
                     f'{Fore.CYAN}You went down the pipe through the sewers and come across a small monster')
                 answer = input('Do you ATTACK or RUN (attack or run)')
@@ -78,13 +77,24 @@ def start_game():
 
 
 # sewer room
-def sewers():
+def sewers(equipped):
+    print(f' you have the {equipped} equipped')
     print(f'{Fore.CYAN}You went down the pipe through the sewers and come across a small monster')
     answer = input(f'Do you ATTACK or RUN (attack or run)')
-
+    
+    if equipped == '' and answer == 'attack':
+        print('You tried to attack the monster but you have no weapon and died a miserable death')
+        
     #   if(equipped == 'Flower')
     if(answer == 'attack'):
         print('')
+        
+#forward
+def forward():
+    print(f'{Fore.CYAN} You went forward and come across two paths') 
+    answer = input(f'Do you go left or right? (Left/Right')
+
+    
 
 # undecided
 def undecided():
