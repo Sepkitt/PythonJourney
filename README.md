@@ -28,7 +28,7 @@ This github repo has been created to keep track of my progress
 | 14            | What’s the word?                  |                 |
 | 15            | Rock, Paper, Scissors             |                 |
 | 16            | Leap it!                          |                 |
-| 17            | Find out, Fibonacci!              |                 |
+| 17            | Find out, Fibonacci!              |`In_Progress`    |
 
 
 ### Python Project Ideas: Intermediate Level
