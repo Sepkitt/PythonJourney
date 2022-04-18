@@ -21,12 +21,10 @@ def start_game():
             print(
                 f'{Fore.CYAN}You go right and you see a pipe that leads down to the sewers')
             answer = input(
-                f'Do you go down the pipe or go forward ({Fore.YELLOW}forward{Fore.RESET}/{Fore.GREEN}down{Fore.RESET})').lower().strip()
+                f'Do you go down the pipe or go continue moving in the same direction ({Fore.YELLOW}continue{Fore.RESET}/{Fore.GREEN}down{Fore.RESET})').lower().strip()
 
-            if(answer == 'forward'):
-                print(f'{Fore.CYAN}You Chose to go forward and you see three different Items{Fore.RESET}. A red glowing {Fore.RED}Apple{Fore.RESET} a green vibrating {Fore.GREEN}Flower{Fore.RESET} and a bright Yellow star shaped {Fore.YELLOW}Cookie{Fore.RESET}')
-                answer = input(
-                    f'Which item do you choose? ({Fore.CYAN}Apple{Fore.RESET}, {Fore.YELLOW}Flower{Fore.RESET}, {Fore.GREEN}Cookie{Fore.RESET})').lower().strip()
+            if(answer == 'continue'):
+                continueRoom()
 
                 if(answer == 'flower'):
                     print(
@@ -38,13 +36,13 @@ def start_game():
                         f'You have to choose if you want to go back to the sewers or go continue going forward. ({Fore.YELLOW}forward{Fore.RESET}/{Fore.GREEN}down{Fore.RESET})').lower().strip()
 
                     if(answer == 'forward'):
-                        print('You go forward and you encounter')
-                        
+                       foward()
+
                     # Go back to Sewers
                     elif(answer == 'down'):
                         sewers(equipped)
                     else:
-                        undecided()
+                        undecided(healthPoints)
 
                 elif(answer == 'cookie'):
                     print(
@@ -56,13 +54,13 @@ def start_game():
                     if(answer == 'down'):
                         sewers(equipped)
                     elif(answer == 'forward'):
-                        forward()
-                        
+                        forward(answer)
+
                 elif(answer == 'apple'):
                     healthPoints = 0
                     print(f'The apple was extremely poisonous and it causes you to collapse, the monster that was chasing you at the beginning caught up to you and you were eaten')
                 else:
-                    undecided()
+                    undecided(healthPoints)
 
             elif(answer == 'down'):
                 print(
@@ -76,30 +74,47 @@ def start_game():
     print(' You have run out of health and has sadly passed away, rest in peace soldier')
 
 
+# Choices
+
+
+def continueRoom():
+
+    print(f'{Fore.CYAN}You Chose to continue  and you see three different Items{Fore.RESET}. A red glowing {Fore.RED}Apple{Fore.RESET} a green vibrating {Fore.GREEN}Flower{Fore.RESET} and a bright Yellow star shaped {Fore.YELLOW}Cookie{Fore.RESET}')
+    answer = input(
+        f'Which item do you choose? ({Fore.CYAN}Apple{Fore.RESET}, {Fore.YELLOW}Flower{Fore.RESET}, {Fore.GREEN}Cookie{Fore.RESET})').lower().strip()
+
+
+def foward():
+    print('Going Forward')
+
 # sewer room
+
+
 def sewers(equipped):
     print(f' you have the {equipped} equipped')
     print(f'{Fore.CYAN}You went down the pipe through the sewers and come across a small monster')
     answer = input(f'Do you ATTACK or RUN (attack or run)')
-    
+
     if equipped == '' and answer == 'attack':
         print('You tried to attack the monster but you have no weapon and died a miserable death')
-        
+
     #   if(equipped == 'Flower')
     if(answer == 'attack'):
         print('')
-        
+
 #forward
-def forward():
-    print(f'{Fore.CYAN} You went forward and come across two paths') 
+
+
+def forward(answer):
+    print(f'{Fore.CYAN} You went forward and come across two paths')
     answer = input(f'Do you go left or right? (Left/Right')
 
-    
 
 # undecided
-def undecided():
+def undecided(healthPoints):
     healthPoints = 0
     print(f'You were unable to decide a proper item. The monster that was chasing you at the beginning caught up to you and you were eaten')
+
 
 while True:
     answer = input(

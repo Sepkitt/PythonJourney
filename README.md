@@ -14,7 +14,7 @@ This github repo has been created to keep track of my progress
 | ------------- |:----------------------------------|:---------------:|
 | 1             | Mad Libs Generator                |`Done`           |
 | 2             | Number Guessing                   |`Done`           |
-| 3             | Text-based Adventure Game         |`In_Progress`    |
+| 3             | Text-based Adventure Game         |`Done`           |
 | 4             | Dice Rolling Simulator            |`Done`           |
 | 5             | Hangman                           |`Done`           |
 | 6             | Contact Book                      |                 |
