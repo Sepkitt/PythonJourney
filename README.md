@@ -17,7 +17,7 @@ This github repo has been created to keep track of my progress
 | 3             | Text-based Adventure Game         |`Done`           |
 | 4             | Dice Rolling Simulator            |`Done`           |
 | 5             | Hangman                           |`Done`           |
-| 6             | Contact Book                      |                 |
+| 6             | Contact Book                      |`In_Progress`    |
 | 7             | Email Slicer                      |                 |
 | 8             | Binary search algorithm           |                 |
 | 9             | Desktop Notifier App              |                 |
