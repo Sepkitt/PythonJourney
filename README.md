@@ -18,7 +18,7 @@ This github repo has been created to keep track of my progress
 | 4             | Dice Rolling Simulator            |`Done`           |
 | 5             | Hangman                           |`Done`           |
 | 6             | Contact Book                      |`In_Progress`    |
-| 7             | Email Slicer                      |                 |
+| 7             | Email Slicer                      |`Done`           |
 | 8             | Binary search algorithm           |                 |
 | 9             | Desktop Notifier App              |                 |
 | 10            | Python Story Generator            |                 |
